@@ -1,0 +1,22 @@
+$ cd assassinato-na-linha-de-comando
+$ cat inicio
+$ grep PISTA cena-do-crime
+$ head pessoas
+$ grep Annabel pessoas
+$ cd rua
+$ cd ..
+$ cd entrevistas
+$ cat entrevista-699607
+$ cd ..
+$ grep L337 -4 automoveis
+$ cd associacoes
+$ grep Joe AAA
+$ grep Jeremy AAA
+$ grep Jacqui AAA
+$ grep $ grep Joe Museu_da_História_do_Bash
+$ grep Jeremy Museu_da_História_do_Bash
+$ grep Jacqui Museu_da_História_do_Bash
+$ cd ..
+$ grep Jeremy pessoas
+$ grep Jacqui pessoas
+Culpado Jeremy
