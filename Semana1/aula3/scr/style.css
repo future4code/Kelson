@@ -1,0 +1,102 @@
+body{
+    margin: 0;
+}
+#cabecalho{
+    display: flex;
+}
+h1 {
+    margin: 10vh auto;
+    font-size: 4vw;
+}
+#menu{
+    background-color: black;
+    height: 4vh;
+    display: flex; 
+}
+#menu a{
+    margin: auto;
+    text-decoration: none;
+    color: white;
+}
+#menu a:hover{
+    font-size: 1.3vw;
+}
+h2{
+    padding: 2vh;
+    width: 30vw;
+    border-radius: 4%;
+    margin-left: 8vw;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    font-size: 4vh;
+    background-color: rgb(75, 74, 74);
+    color: rgb(160, 140, 140)
+}
+form{
+    border: 3px solid black;
+    padding: 3vh;
+    margin: 1vw 8vw
+}
+#descricao{
+    height: 10vh;
+    width: 79vw;
+}
+#preco{
+    margin-left: 45vw
+}
+button{
+    padding: 0.7vh;
+    background-color: white
+}
+button:hover{
+    padding: 0.7vh;
+    background-color: black;
+    color: white;
+}
+.tablela{
+    display: flex;
+}
+table{
+    margin: auto;
+}
+th{
+    color:white;
+    background-color: black;
+    padding: 0.5vw
+}
+td{
+    color:white;
+    background-color: rgb(61, 61, 61);
+    padding: 0.5vw
+}
+img{
+    height: ;
+    width: 30vw;
+}
+#home1{
+    font-size: 3.5vw;
+    margin: auto;
+    
+}
+#home2{
+    font-size: 2.5vw;
+    margin: auto;
+    
+}
+#bemvindo{
+    display: flex;
+    margin-top: 10vh;
+    margin-bottom: 10vh
+}
+#rodape{
+    margin-top: 16vh;
+    background-color: rgb(85, 85, 85);
+    display: flex;
+    color:white;
+}
+#rodape div{
+    margin: 4vh auto ;
+    border-radius: 3%;
+    background-color: rgb(44, 44, 44);
+    padding: 2vh 4vh
+}
