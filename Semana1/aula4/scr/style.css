@@ -8,10 +8,18 @@ h1 {
     margin: 10vh auto;
     font-size: 4vw;
 }
+#cabecalho:hover{
+    color: white;
+    background-color: black;
+    border: 0.5vh solid white;
+    border-bottom-color: white;
+}
 #menu{
     background-color: black;
     height: 4vh;
-    display: flex; 
+    display: flex;
+    position: sticky; 
+    top:0;
 }
 #menu a{
     margin: auto;
@@ -23,8 +31,8 @@ h1 {
 }
 h2{
     padding: 2vh;
-    width: 30vw;
-    border-radius: 10%;
+    width: 15vw;
+    border-radius: 4%;
     margin-left: 8vw;
     margin-top: 4vh;
     margin-bottom: 4vh;
@@ -44,6 +52,10 @@ form{
 #preco{
     margin-left: 45vw
 }
+input:hover{
+    color:white;
+    background-color: black;
+}
 button{
     padding: 0.7vh;
     background-color: white
@@ -52,6 +64,9 @@ button:hover{
     padding: 0.7vh;
     background-color: black;
     color: white;
+}
+button:active{
+    border: 0.4vh solid gray;
 }
 .tablela{
     display: flex;
@@ -62,7 +77,9 @@ table{
 th{
     color:white;
     background-color: black;
-    padding: 0.5vw
+    padding: 0.5vw;
+    position: sticky; 
+    top: 4vh;
 }
 td{
     color:white;
@@ -76,17 +93,27 @@ img{
 #home1{
     font-size: 3.5vw;
     margin: auto;
-    
+}
+#home1::first-letter{
+    color: white;
+    background-color: black
 }
 #home2{
     font-size: 2.5vw;
     margin: auto;
-    
+    text-align: center
+}
+#home2:hover{
+    color: white;
+    background-color: black;
+    border: 0.5vh solid white;
+    border-bottom-color: white;
 }
 #bemvindo{
     display: flex;
     margin-top: 10vh;
-    margin-bottom: 10vh
+    margin-bottom: 10vh;
+    position: relative;
 }
 #rodape{
     margin-top: 16vh;
@@ -99,4 +126,18 @@ img{
     border-radius: 3%;
     background-color: rgb(44, 44, 44);
     padding: 2vh 4vh
+}
+svg {
+    color: #fff;
+    fill: #fff;
+    height: 3vw;
+    width: 3vw;
+    margin-left: 1.8vw;
+}
+.dark-logo{
+    height: 3vw;
+    width: 7vw;  
+}
+#fornecedoras{
+    display: grid;
 }
