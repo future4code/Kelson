@@ -1,7 +1,6 @@
 body{
     margin: 0;
 }
-
 h1 {
     margin: 10vh auto;
     font-size: 4vw;
@@ -150,4 +149,7 @@ svg {
 }
 #fornecedoras{
    margin: 42vw;
+}
+#funcionarios{
+    margin-left: 42vw
 }
