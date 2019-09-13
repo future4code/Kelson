@@ -150,12 +150,60 @@ button:hover{
 button:active{
     border: 0.4vh solid gray;
 }
-#facebook{
-    margin-left: 70vw;
-    margin-top: 10vh;
-    color: white;
-    background-color: white;
+#social{
+    position: relative;
 }
-#facebook img{
-
+#facebook{
+    margin-left: 60vw;
+    margin-top: 13vh;
+    color: white;
+    position: absolute;
+}
+#linkedin{
+    margin-left: 70vw;
+    margin-top: 13vh;
+    color: white;
+    position: absolute;
+}
+#github{
+    margin-left: 80vw;
+    margin-top: 13vh;
+    color: white;
+    position: absolute;
+}
+#facebook:hover{
+    color: gray;
+}
+#linkedin:hover{
+    color: gray;
+}
+#github:hover{
+    color: gray;
+}
+#cont{
+    background-color: rgb(194, 192, 192);
+    position: relative;
+    height: 200vh;
+}
+#cont h2{
+    font-size: 5vh;
+    margin-left: 14vh;
+    margin-top: 5vh;
+    position: absolute;
+}
+#galeria{
+    margin-top: 15vh;
+    margin-inline: 10vh;
+    position: absolute;
+    background-color:  rgb(129, 129, 129);
+    width: 90%;
+    height: 40vh;
+    border-radius: 3%;
+    display: flex;
+}
+#galeria img{
+    border: 1vh solid black;
+    margin: auto;
+    height: 25vh;
+    width: 40vh;
 }
