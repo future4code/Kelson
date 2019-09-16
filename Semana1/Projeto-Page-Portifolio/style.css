@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+}
+#top{
+    color: white;
+    background-color: black;
+    border: 1vh solid white;
+    height: 80vh;;
+}
+H1{
+    position: absolute;
+    margin-left: 26vw;
+    margin-top: 36vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 5.5vh;
+}
+#top p{
+    position: absolute;
+    margin-left: 43vw;
+    margin-top: 42vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 4vh;
+}
+nav{
+    background-color: black; 
+    height: 4vh;
+    display:flex;
+    position: sticky;
+    top: 0;
+}
+nav a{
+    margin: auto;
+    line-height: 4vh;
+    text-decoration: none;
+    color: white;
+}
+nav a:hover{
+    font-size: 1.3vw;
+}
+#Info{
+    height: 100vh;
+    background-color: rgb(194, 192, 192);
+    position: relative;
+}
+#foto{
+    border: 1vh solid rgb(63, 63, 63);
+    border-radius: 100%;
+    height: 30vh;
+    width: 30vh;
+    margin-left: 38vh;
+    margin-top: 33vh;
+    position: absolute;
+}
+#sobre{
+    background-color: rgb(63, 63, 63);
+    border-radius: 10%;
+    height: 30vh;
+    width: 30vw;
+    margin-left: 50vw;
+    margin-top: 33vh;
+    position: absolute;
+}
+#Habilidades{
+    height: 100vh;
+    background-color: rgb(129, 129, 129);
+    position: relative;
+}
+#Habilidades h2{
+    font-size: 7vh;
+    margin-left: 42vw;
+    margin-top: 5vh;
+    position: absolute
+}
+#Habilidades div{
+    font-size: 3vh;
+    margin-left: 10vw;
+    margin-top: 40vh;
+    position: absolute;
+    height: 35vh;
+    width: 80vw;
+    background-color: rgb(90, 90, 90);
+    display: flex;
+    border-radius: 2%
+}
+div ul{
+    margin-top: 15vh;
+    margin-right: 20vw;
+    margin-left: 5vw;
+
+}
+#Portifolio{
+    height: 100vh;
+    background-color: rgb(90, 90, 90);
+    position: relative;
+}
+#Portifolio h2{
+    font-size: 7vh;
+    margin-left: 42vw;
+    margin-top: 5vh;
+    position: absolute
+}
+#Portifolio div{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+#Portifolio a{
+    margin: auto;
+}
+#Portifolio a img{
+    border: 2vh solid black;
+    border-radius: 3%;
+    height: 20vh;
+    width: 30vh;
+}
+#Contato{
+    height: 80vh;
+    background-color: rgb(0, 0, 0);
+}
+#Contato form{
+    height: 50vh;
+    width: 40vw;
+    background-color: rgb(90, 90, 90);
+    position: absolute;
+    padding: 3vh;
+    margin: 13vh 10vh;
+    border-radius: 3%;
+}
+
+#Mensagem{
+    height: 38vh;
+    width: 35vw;
+}
+#Nome{
+    margin-left: 1.7vw;
+}
+#email{
+    margin-left: 1.7vw;
+}
+button{
+    width: 5vw;
+    padding: 0.7vh;
+    background-color: white;
+    margin-left: 34.4vw
+}
+button:hover{
+    background-color: black;
+    color: white;
+}
+button:active{
+    border: 0.4vh solid gray;
+}
+#social{
+    position: relative;
+}
+#facebook{
+    margin-left: 60vw;
+    margin-top: 13vh;
+    color: white;
+    position: absolute;
+}
+#linkedin{
+    margin-left: 70vw;
+    margin-top: 13vh;
+    color: white;
+    position: absolute;
+}
+#github{
+    margin-left: 80vw;
+    margin-top: 13vh;
+    color: white;
+    position: absolute;
+}
+#facebook:hover{
+    color: gray;
+}
+#linkedin:hover{
+    color: gray;
+}
+#github:hover{
+    color: gray;
+}
+#cont{
+    background-color: rgb(194, 192, 192);
+    position: relative;
+    height: 200vh;
+}
+#cont h2{
+    font-size: 5vh;
+    margin-left: 14vh;
+    margin-top: 5vh;
+    position: absolute;
+}
+#galeria{
+    margin-top: 15vh;
+    margin-inline: 10vh;
+    position: absolute;
+    background-color:  rgb(129, 129, 129);
+    width: 90%;
+    height: 40vh;
+    border-radius: 3%;
+    display: flex;
+}
+#galeria img{
+    border: 1vh solid black;
+    margin: auto;
+    height: 25vh;
+    width: 40vh;
+}
