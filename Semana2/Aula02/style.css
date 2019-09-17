@@ -3,6 +3,26 @@ body{
     padding: 0;
 }
 
+#body{
+    display: flex;
+}
+
+#lateral{
+    background-color: gray;
+    height: 100vh;
+    position: fixed;
+}
+
+#lateral p{
+    padding: 0 2vh;
+    width: 10vw
+}
+
+#cont{
+    width: 90vw;
+    margin-left: 12vw
+}
+
 nav{
     background-color: red;
     height: 5vh;
@@ -65,6 +85,17 @@ footer div{
     footer div{
         min-width: 30vw;
     }
+}
+
+@media (max-width: 500px){
+    #lateral{
+        display: none;
+    }
+    #cont{
+        width: 100vw;
+        margin-left: 0;
+    }
+
 }
 
 @media (max-width: 500px){
