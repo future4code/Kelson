@@ -1,0 +1,111 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#body{
+    display: flex;
+}
+
+#lateral{
+    background-color: gray;
+    height: 100vh;
+    position: fixed;
+}
+
+#lateral p{
+    padding: 0 2vh;
+    width: 10vw
+}
+
+#cont{
+    width: 90vw;
+    margin-left: 12vw
+}
+
+nav{
+    background-color: red;
+    height: 5vh;
+}
+
+section{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+}
+
+section div{
+    flex: 1;
+    margin: 2vh;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer div{
+    flex: 1;
+    margin: 2vh;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black
+}
+
+#s3 div{
+    height: 30vh;
+    color: white;
+    background-color: black;
+}
+
+.d1{
+    background-color: blue;
+}
+
+.d2{
+    background-color: yellow;
+}
+
+.d3{
+    background-color: green;
+}
+
+
+@media (max-width: 800px){
+    section div{
+        min-width: 30vw;
+    }
+    footer div{
+        min-width: 30vw;
+    }
+}
+
+@media (max-width: 500px){
+    #lateral{
+        display: none;
+    }
+    #cont{
+        width: 100vw;
+        margin-left: 0;
+    }
+
+}
+
+@media (max-width: 500px){
+    section div{
+        min-width: 45vw;
+    }
+    footer div{
+        min-width: 45vw;
+    }
+    #s3 div{
+        min-width: 45vw;
+    }
+}
