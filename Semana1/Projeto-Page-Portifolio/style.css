@@ -53,7 +53,7 @@ nav a:hover{
 }
 #sobre{
     background-color: rgb(63, 63, 63);
-    border-radius: 10%;
+    border-radius: 2vh;
     height: 30vh;
     width: 30vw;
     margin-left: 50vw;
