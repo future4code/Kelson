@@ -22,11 +22,6 @@ h1, input{
     margin: 3vw;
 }
 
-section{
-    display: flex;
-    flex: 1
-}
-
 main{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -39,13 +34,14 @@ main{
 a{
     text-decoration: none;
     color: black;
+    font-size: 2vh;
 }
-
-
 
 section{
     display: grid;
     grid-template-columns: 10vw 73vw 15vw; 
+    grid-template-rows: 1fr;
+    flex: 1;
 }
 
 nav div{
@@ -57,6 +53,7 @@ nav div{
 }
 
 nav{
+    height: 100% ;
     display: grid;
     grid-template-rows: auto 1fr
 }
@@ -75,7 +72,8 @@ main a{
 }
 
 a p{
-    margin:1vw
+    margin:1vw;
+    font-size: 1.7vh;
 }
 
 .imgdechamada{
@@ -97,7 +95,7 @@ article{
 }
 
 #menulateral_esquerdo img{
-    height: 10vh ;
+    height: 5vw ;
 }
 
 #menulateral_esquerdo {
@@ -124,28 +122,36 @@ footer{
 footer p{
     margin: 3vw;
     font-size: 3vh;
+    
 }
 
 video{
     width: 70vw;
 }
 
-@media (max-width: 500px){
+@media (max-width: 810px){
     main{
         grid-template-columns: 1fr; 
     }
-    main a, .imgdechamadag {
+    main a, .imgdechamada {
         width: 80vw;
+    }
+    nav div{
+        display: flex;
+        flex-direction: column;
+        border-right: none;
+    }
+    nav a {
+        align-self: center;
     }
     section{
         display: grid;
         grid-template-columns: 1fr;
     }
-}
-
-@media (max-width: 700px){
-    nav{
-        display: none;
+    #menulateral_esquerdo {
+        justify-items: center;
     }
-
+    #menulateral_esquerdo img{
+        height: 16vw ;
+    }
 }
