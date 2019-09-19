@@ -45,17 +45,16 @@ section{
 }
 
 nav div{
-    border-right: 2px solid black
+    border-right: 2px solid black;
 }
 
 #navsuperior{
-    border-bottom: 1px solid gray
+    border-bottom: 1px solid gray;
 }
 
 nav{
-    height: 100% ;
     display: grid;
-    grid-template-rows: auto 1fr
+    grid-template-rows: auto 1fr;
 }
 
 div a {
