@@ -9,18 +9,45 @@
 </head>
 <body>
     <header>
-        <h1>FutureTube</h1>
-        <input type="search">
+        <h1><a href="index.html">FutureTube</a> </h1>
+        <input type="search"  placeholder="Busca">
     </header>
     
-    <section id="player">
-       <h2>Títuo do Vídeo</h2>
-       <video src="http://soter.ninja/videos/2.mp4" autoplay controls></video>
+    <section id="main-container">
+        <nav>
+            <div id="navsuperior">
+                <a href="index.html">Inicio</a>
+                <a href="">Em alta</a>
+                <a href="">Inscrições</a>
+                <a href="">Originais</a>
+            </div>
+            <div id="navinferior">
+                <a href="">Biblioteca</a>
+                <a href="">Histórico</a>
+            </div>
+        </nav>
+
+        <article>
+            <video src="http://soter.ninja/videos/2.mp4" autoplay controls></video>
+            <div id="rodape_video">
+                <h2>Títuo do Vídeo</h2>
+                <div>
+                    <button>Curtir</button>
+                    <button>Decurtir</button>
+                </div>
+            </div>
+            
+        </article>
+        <section id="menulateral_esquerdo">
+            <a href="Video1.html"><img src="img/video1.png" alt=""><p>vídeo 1</p></a>
+            <a href="Video5.html"><img src="img/video5.png" alt=""><p>vídeo 5</p></a>
+            <a href="Video3.html"><img src="img/video3.png" alt=""><p>vídeo 3</p></a>
+        </section>
+
     </section>
+        <footer>
+            <p>Oi!Eu morro no footer!</p>
 
-    <footer>
-        <p>Oi!Eu morro no footer!</p>
-
-    </footer>
+        </footer>
 </body>
 </html>
