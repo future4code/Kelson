@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    
+    <script>
+        function novaTarefa(){
+            let tarefa = document.querySelector("input").value;
+            let dia = document.querySelector("#dia").value;
+            let nova = document.querySelector("#"+dia)
+            if(tarefa){
+                let newLi = document.createElement("li");
+                newLi.innerHTML = tarefa;
+                nova.appendChild(newLi);
+                document.querySelector("input").value = "";
+            }
+        }
+    </script>
+</head>
+<body>
+    <section id="novatarefa">
+        <input placeholder="Nova Tarefa" type="text" name="tarefa">
+        <select name="dia" id="dia">
+            <option value="segunda">Segunda-Feira</option>
+            <option value="terca">Terça-Feira</option>
+            <option value="quarta">Quarta-Feira</option>
+            <option value="quinta">Quinta-Feira</option>
+            <option value="sexta">Sexta-Feira</option>
+            <option value="sabado">Sábado</option>
+            <option value="domingo">Domingo</option>
+        </select>
+        <button onclick="novaTarefa()">Criar Tarefa</button>
+    </section>
+    <section id="planner">
+        <article>
+            <h2>Domingo</h2>
+            <ul id="domingo">
+
+            </ul>
+        </article>
+        <article>
+            <h2 >Segunda-feira</h2>
+            <ul id="segunda">
+
+            </ul>
+        </article>
+        <article>
+            <h2>Terça-feira</h2>
+            <ul id="terca">
+                
+            </ul>
+        </article>
+        <article>
+            <h2>Quarta-feira</h2> 
+            <ul id="quarta">
+                
+            </ul>   
+        </article>
+        <article>
+            <h2>Quinta-feira</h2>
+            <ul id="quinta">
+                
+            </ul>
+        </article>
+        <article>
+            <h2>Sexta-feira</h2>
+            <ul id="sexta">
+                
+            </ul>
+        </article>
+        <article>
+            <h2>Sábado</h2>
+            <ul id="sabado">
+                
+            </ul>
+        </article>
+    </section>
+</body>
+</html>

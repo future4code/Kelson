@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: grid;
+}
+#novatarefa{
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+input{
+    margin-right: 2vw;
+}
+select{
+    margin-right: 2vw;
+}
+#planner{
+    display: flex;
+    justify-content: center;
+}
+h2{
+    border-bottom: 1px solid black; 
+    height: 5vh;
+    justify-self: center;
+}
+article{
+    border: 1px solid black;
+    display: grid;
+    height: 70vh;
+    width: 14vw;
+
+}
