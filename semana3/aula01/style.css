@@ -31,5 +31,9 @@ article{
     display: grid;
     height: 70vh;
     width: 14vw;
+    grid-template-rows: 5vh 1fr;
 
+}
+ul{
+    margin:1vw;
 }
