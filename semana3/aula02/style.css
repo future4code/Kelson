@@ -1,0 +1,11 @@
+form{
+    display: grid;
+
+}
+form input{
+    width: 30vw;
+}
+button{
+    margin-top: 2vh;
+    width: 6vw;
+}
