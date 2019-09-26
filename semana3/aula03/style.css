@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+}
+section{
+    display: grid;
+    margin: 1vw;
+}
+main{
+    display: grid;
+    margin: 1vw
+}
+article{
+    border: 1px solid black;
+    margin-top: 2vh;
+    width: 70vw;
+    min-height: 40vh;
+}
