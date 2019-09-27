@@ -156,5 +156,25 @@ function anonimo(){
 
 // Funções de array ---------------------------------------------------------------------------------------------------------------
 
+
+// 1)
+function arrayPessoas (){
+    const pessoas = [
+        { nome: "Pedro", idade: 20 },
+        { nome: "João", idade: 10 },
+        { nome: "Paula", idade: 12 },
+        { nome: "Artur", idade: 89 } 
+    ];
+    function adutos(pessoas){
+        const adultos = pessoas.filter( pessoa => {return pessoas.idade > 19});
+        return adultos
+    }
+    function  criancas(pessoas){
+        const criancas = pessoas.filter( pessoa => {return pessoas.idade < 20});
+        return criancas
+    }
+}
+
+
 </script>
 </html>
