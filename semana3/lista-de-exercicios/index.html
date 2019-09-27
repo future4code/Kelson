@@ -214,6 +214,43 @@ function montanha (){
     }
 }
 
+// 4)
+ function consultorio(){
+    const consultas = [
+        { nome: "João", genero: "masculino", cancelada: true, dataDaConsulta: "01/10/2019" },
+        { nome: "Pedro", genero: "masculino", cancelada: false, dataDaConsulta: "02/10/2019" },
+        { nome: "Paula", genero: "feminino", cancelada: true, dataDaConsulta: "03/11/2019" },
+        { nome: "Márcia", genero: "feminino", cancelada: false, dataDaConsulta: "04/11/2019" }
+    ];
+    const consulta = (consultas) => {
+        let confirmadas = consultas.filter(consulta => { return (!consulta.cancelada)});
+        confirmadas = confirmadas.map(consulta => { if (consulta.genero === "masculino"){
+                                                        consulta.genero = "Sr.";
+                                                        consulta.lem = "lembrá-lo";
+                                                    }
+                                                    else {
+                                                        consulta.genero = "Sra.";
+                                                        consulta.lem = "lembrá-la";
+                                                    }
+        });
+        const emails = confirmadas.map(consulta => { "Olá, " + consulta.genero + " " + consulta.nome + ". Estamos enviando esta mensagem para " + consulta.lem + " da sua consulta no dia " + consulta.dataDaConsulta + ". Por favor, acuse o recebimento deste e-mail."})
+        return emails
+    }
+    const cancelada = (consultas) => {
+        let confirmadas = consultas.filter(consulta => { return consulta.cancelada});
+        confirmadas = confirmadas.map(consulta => { if (consulta.genero === "masculino"){
+                                                        consulta.genero = "Sr.";
+                                                        consulta.lem = "lembrá-lo";
+                                                    }
+                                                    else {
+                                                        consulta.genero = "Sra.";
+                                                        consulta.lem = "lembrá-la";
+                                                    }
+        });
+        const emails = confirmadas.map(consulta => { "Olá, " + consulta.genero + " " + consulta.nome + ". Infelizmente, sua consulta marcadapara o dia " + consulta.dataDaConsulta + "foi cancelada. Se quiser, pode entrar em contato conosco para remarcá-la"})
+        return emails
+}
+
 
 </script>
 </html>
