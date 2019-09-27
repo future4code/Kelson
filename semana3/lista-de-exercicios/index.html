@@ -175,6 +175,25 @@ function arrayPessoas (){
     }
 }
 
+// 2)
+function arrayNumeros (){
+    const array = [1, 2, 3, 4, 5, 6];
+    function multiplicada2 (array){
+        return array.map( numb => { return numb*2})
+    }
+    function multiplicada3 (array){
+        return array.map( numb => { return numb*3})
+    }
+    function imparPar (array){
+        return array.map( numb => { if(numb%2 == 0){
+                                        return (numb + " é par")
+                                    }
+                                    else{
+                                        return (numb + " é impar")
+                                    })
+    }
+}
+
 
 </script>
 </html>
