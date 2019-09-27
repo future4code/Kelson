@@ -135,6 +135,24 @@ function filme (){
     console.log("Venha assistir ao filme" + filme.titulo + ", de " + filme.ano + ", dirigido por " + filme.diretor + " e estrelado por " + filme.ator + ", " + filme.ator2 + ".")
 }
 
+// 4)
+function anonimo(){
+    const pessoa = {
+        nome = 'Joaquim', 
+        idade = 20, 
+        email = 'joaquim.20@gmail.com',
+        endereco = 'Rua sem nome, 200'
+    }
+    function anonimizarPessoa(pessoa){
+        const anonimo = pessoa;
+        anonimo.nome = 'ANÔNIMO'; 
+        anonimo.idade = 'ANÔNIMO'; 
+        anonimo.email = 'ANÔNIMO';
+        anonimo.endereco = 'ANÔNIMO';
+        return anonimo
+    }
+}
+
 
 // Funções de array ---------------------------------------------------------------------------------------------------------------
 
