@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: space-between;
+}
+
+section{
+    width: 30vw;
+    min-height: 20vh;
+    margin: 2vw;
+    border: 1px solid red;
+}
+
+#filtro div{
+    display: flex;
+justify-content: space-evenly
+}
+
+.despesa{
+    display: flex;
+    justify-content: space-evenly
+}
+section > div{
+    display: flex;
+    justify-content: space-between
+}

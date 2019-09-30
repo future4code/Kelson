@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h2>Controlador de Despesas</h2>
+        <h5>Cadastrar despesas</h5><br>
+        <label for="">Valor:</label>
+        <input type="number" id='valor'><br><br>
+        <label for="">Tipo de Despesas:</label>
+        <select name="" id="tipo-de-despesas">
+            <option value=""></option>
+            <option value="Casa">Casa</option>
+            <option value="Festas">Festas</option>
+            <option value="Viagem">Viagem</option>
+            <option value="Alimentacao">Alimentação</option>
+        </select><br><br>
+        <label for="">Descrição:</label>
+        <input type="text" id="descricao"><br><br>
+        <button onclick="criar(), exibir(), exibir2(), soma()">Criar</button>
+    </section>
+
+    <section>
+        <h2>Despesas</h2><br>
+        <label for="">Tipo de Despesas:</label>
+        <select name="" id="seletor-tipo-de-despesas">
+            <option value=""></option>
+            <option value="Casa">Casa</option>
+            <option value="Festas">Festas</option>
+            <option value="Viagem">Viagem</option>
+            <option value="Alimentacao">Alimentação</option>
+        </select><br><br>
+        <label for="">Valor Máximo</label>
+        <input type="number" id='valor-maximo'><br><br>
+        <label for="">Valor Minimo</label>
+        <input type="number" id='valor-minimo'><br><br>
+        <button onclick="exibir()">Filtar</button>
+        <button onclick="apagar()">Limpar Filtros</button>
+        <article id="filtro">
+
+        </article>
+    </section>
+
+    <section>
+        <h2>Extrato</h2><br>
+        <div>
+            <h4>Valor Total:</h4>
+            <p id="valor-total">R$ 0</p>
+        </div>
+        <article id="despesas">
+
+        </article>
+    </section>
+</body>
+<script src="script.js"></script>
+</html>
