@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+// Interpretação de código --------------------------------------------------------------------------------------------------------
+
+
+// 1) O código convertera 100 para o valor em dólares usando a cotação informada pelo usuário. 
+// Valor impresso: 100*cotacao; 
+
+// 2) O código executa duas vezes uma função que recebe por parâmetro o tipo de aplicação e o valor aplicado, seleciona o tipo de aplicação através de um switch case e retorna o valor mais o rendimento que a aplicação terá.
+// Valor impresso: 165 ;  undefind ;
+
+// 3) O código separa os números de um array em dois arrays, um para números pares outro para números impares. 
+// Valor impresso: " Quantidade de números 14"; 6 ; 8 ;
+
+// 4) O código seleciona o menor e maior numero de um array.
+// Valor impresso: -10 ; 1590 ;
+
+
+// Lógica de Programação ----------------------------------------------------------------------------------------------------------
+
+
+// 1) For(i=0; i < array.length; i++ ) , for(intem of array) , array.forEach.
+function listar() {
+    const array = [1,2,3,4,5,6,7,8,9,0];
+    array.forEach((item)=> {
+        console.log(item);
+    })   
+}
+
+// 2) A)False B)False C)True D)True E)True
+
+// 3) O código não funcionará.
+function Pares(quantidadeDeNumerosPares) {
+    let i = 0;
+    while(i < quantidadeDeNumerosPares) {
+        console.log(i*2);
+        i++;
+    }  
+}
+
+// 4)
+function tiangulos(a,b,c){
+    if ( a !== b !== c){
+        console.log("Escaleno")
+    }
+    else if ( a === b === c) {
+        console.log("Equilátero")
+    }
+    else{
+        console.log("Isósceles")
+    }
+}
+
+// 5)
+function relacionar(a,b){
+    let maior;
+    let menor;
+
+    if (a>b){
+        maior = a;
+        menor = b;
+    }
+    else{
+        maior = b;
+        menor = a;
+    }
+
+    console.log("O maior é: " + maior);
+    console.log(menor + " não é divisivel por " + maior);
+    if (maio % mmenor === 0){
+        console.log(maior + " é divisivel por " + menor);
+    }
+    else{
+        console.log(maior + " não é divisivel por " + menor);
+    }
+    console.log("Adiferença entre eles é " + (maior - menor));
+}
+
+// Funções ------------------------------------------------------------------------------------------------------------------------
+
+// 1)
+function ordernar(array) {
+    array.sort(function(a,b){
+        return a > b;
+    });
+    console.log(array[1]);
+    console.log(array[(array.lenght - 2)]);
+}
+
+// 2)
+function naoNomeada(){
+    const fun = () => {
+        alert("Hello Future4");
+    }
+    fun;
+}
+
+
+// Objetos ------------------------------------------------------------------------------------------------------------------------
+
+
+// 1) Objetos são variáveis que aceitam vários elementos ao mesmo tempo que podem ser ,ou não, de mesmo tipo em ordem aleatórias, e podem conter métodos que são funções pré estabelecidas que aquele objeto pode executar.
+// Arrays são um tipo particular de obijeto que são ordenados.
+
+// 2)
+const quadrado = (lado1, lado2)=>{
+    const quadrado = {}
+    quadrado.largura = lado1 ;
+    quadrado.altura = lado2;
+    quadrado.perímetro = 2 * (lado1 + lado2);
+    quadrado.área = lado1 * lado2;
+
+    return quadrado
+}
+
+// 3)
+function filme (){
+    const filme = {
+        titulo = "War Sovereign Soaring The Heavens",
+        ano = "2019",
+        diretor = "EndlessFantasy",
+        ator = "Duan Ling Tian",
+        ator2 = "Gu Li´s"
+    }
+    console.log("Venha assistir ao filme" + filme.titulo + ", de " + filme.ano + ", dirigido por " + filme.diretor + " e estrelado por " + filme.ator + ", " + filme.ator2 + ".")
+}
+
+// 4)
+function anonimo(){
+    const pessoa = {
+        nome = 'Joaquim', 
+        idade = 20, 
+        email = 'joaquim.20@gmail.com',
+        endereco = 'Rua sem nome, 200'
+    }
+    function anonimizarPessoa(pessoa){
+        const anonimo = pessoa;
+        anonimo.nome = 'ANÔNIMO'; 
+        anonimo.idade = 'ANÔNIMO'; 
+        anonimo.email = 'ANÔNIMO';
+        anonimo.endereco = 'ANÔNIMO';
+        return anonimo
+    }
+}
+
+
+// Funções de array ---------------------------------------------------------------------------------------------------------------
+
+
+// 1)
+function arrayPessoas (){
+    const pessoas = [
+        { nome: "Pedro", idade: 20 },
+        { nome: "João", idade: 10 },
+        { nome: "Paula", idade: 12 },
+        { nome: "Artur", idade: 89 } 
+    ];
+    function adutos(pessoas){
+        const adultos = pessoas.filter( pessoa => {return pessoas.idade > 19});
+        return adultos
+    }
+    function  criancas(pessoas){
+        const criancas = pessoas.filter( pessoa => {return pessoas.idade < 20});
+        return criancas
+    }
+}
+
+// 2)
+function arrayNumeros (){
+    const array = [1, 2, 3, 4, 5, 6];
+    function multiplicada2 (array){
+        return array.map( numb => { return numb*2})
+    }
+    function multiplicada3 (array){
+        return array.map( numb => { return numb*3})
+    }
+    function imparPar (array){
+        return array.map( numb => { if(numb%2 == 0){
+                                        return (numb + " é par")
+                                    }
+                                    else{
+                                        return (numb + " é impar")
+                                    })
+    }
+}
+
+// 3)
+function montanha (){
+    const pessoas = [
+        { nome: "Paula", idade: 12, altura: 1.8},
+        { nome: "João", idade: 20, altura: 1.3},
+        { nome: "Pedro", idade: 15, altura: 1.9},
+        { nome: "Luciano", idade: 22, altura: 1.8},
+        { nome: "Artur", idade: 10, altura: 1.2},
+        { nome: "Soter", idade: 70, altura: 1.9}
+    ];
+    function permitidos(pessoas){
+        const permitidos = pessoas.filter( pessoa => {return (pessoas.idade > 14) && ( pessoas.idade < 60) &&  (pessoas.altura > 1.5)});
+        return permitidos
+    }
+    function  naoPermitidos(pessoas){
+        const naoPermitidos = pessoas.filter( pessoa => {return (pessoas.idade < 14) || ( pessoas.idade > 60) ||  (pessoas.altura < 1.5)});
+        return naoPermitidos
+    }
+}
+
+// 4)
+ function consultorio(){
+    const consultas = [
+        { nome: "João", genero: "masculino", cancelada: true, dataDaConsulta: "01/10/2019" },
+        { nome: "Pedro", genero: "masculino", cancelada: false, dataDaConsulta: "02/10/2019" },
+        { nome: "Paula", genero: "feminino", cancelada: true, dataDaConsulta: "03/11/2019" },
+        { nome: "Márcia", genero: "feminino", cancelada: false, dataDaConsulta: "04/11/2019" }
+    ];
+    const consulta = (consultas) => {
+        let confirmadas = consultas.filter(consulta => { return (!consulta.cancelada)});
+        confirmadas = confirmadas.map(consulta => { if (consulta.genero === "masculino"){
+                                                        consulta.genero = "Sr.";
+                                                        consulta.lem = "lembrá-lo";
+                                                    }
+                                                    else {
+                                                        consulta.genero = "Sra.";
+                                                        consulta.lem = "lembrá-la";
+                                                    }
+        });
+        const emails = confirmadas.map(consulta => { "Olá, " + consulta.genero + " " + consulta.nome + ". Estamos enviando esta mensagem para " + consulta.lem + " da sua consulta no dia " + consulta.dataDaConsulta + ". Por favor, acuse o recebimento deste e-mail."})
+        return emails
+    }
+    const cancelada = (consultas) => {
+        let confirmadas = consultas.filter(consulta => { return consulta.cancelada});
+        confirmadas = confirmadas.map(consulta => { if (consulta.genero === "masculino"){
+                                                        consulta.genero = "Sr.";
+                                                        consulta.lem = "lembrá-lo";
+                                                    }
+                                                    else {
+                                                        consulta.genero = "Sra.";
+                                                        consulta.lem = "lembrá-la";
+                                                    }
+        });
+        const emails = confirmadas.map(consulta => { "Olá, " + consulta.genero + " " + consulta.nome + ". Infelizmente, sua consulta marcadapara o dia " + consulta.dataDaConsulta + "foi cancelada. Se quiser, pode entrar em contato conosco para remarcá-la"})
+        return emails
+}
+
+// 5)
+function banco(){
+    const contas = [
+        { cliente: "João", saldoTotal: 1000, compras: [100, 200, 300] },
+        { cliente: "Paula", saldoTotal: 7500, compras: [200, 1040] },
+        { cliente: "Pedro", saldoTotal: 10000, compras: [5140, 6100, 100, 2000] },
+        { cliente: "Luciano", saldoTotal: 100, compras: [100, 200, 1700] },
+        { cliente: "Artur", saldoTotal: 1800, compras: [200, 300] },
+        { cliente: "Soter", saldoTotal: 1200, compras: [] }
+    ];
+    function saldo(contas){
+        contas.forEach(conta => { conta.saldoTotal -= soma(conta.compras) })
+    }
+    function soma(compras){
+        let soma = 0
+        for( item of compras){ 
+            soma += item;
+        }
+        return soma
+    }
+}
+
+
+</script>
+</html>
