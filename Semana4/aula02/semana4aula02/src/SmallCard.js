@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import PropType from 'prop-types';
 
 function SmallCard(props) {
   return (
@@ -11,6 +12,13 @@ function SmallCard(props) {
         </div>
     </div>
   );
+}
+
+SmallCard.propType ={
+    img: PropType.string.isRequired,
+    imgname: PropType.string,
+    label: PropType.string.isRequired,
+    text: PropType.string.isRequired,
 }
 
 export default SmallCard;

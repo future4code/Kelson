@@ -1,3 +1,7 @@
+*{
+  border: 0;
+  padding: 0;
+}
 .App {
   display: grid;
   text-align: center;
@@ -53,7 +57,7 @@ img{
 
 .ImagemButton{
   display: grid;
-  grid-template-columns: 1px 1fr; 
+  grid-template-columns: 1px 1fr ; 
   border: 1px solid black;
   border-radius: 100px;
   width: 15vw;

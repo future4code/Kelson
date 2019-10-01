@@ -24,8 +24,8 @@ function App() {
       </PageSection> 
       
       <PageSection titulo='Experiência Proficional'>
-        <BigCard img={ logo1 } imgname='logo1' titulo='Empresa' text='Descrição' />
-        <BigCard img={ logo2 } imgname='logo2' titulo='Empresa' text='Descrição' />
+        <BigCard img={ logo1 } imgname='Facebook' titulo='Facebook' text='No Facebook você pode se conectar e compartilhar o que quiser com quem é importante em sua vida' />
+        <BigCard img={ logo2 } imgname='Microsoft' titulo='Microsot' text='A gente inova, você transforma' />
       </PageSection>
 
       <PageSection titulo='Redes Sociais'>
