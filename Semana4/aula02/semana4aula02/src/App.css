@@ -1,0 +1,71 @@
+.App {
+  display: grid;
+  text-align: center;
+  justify-content: center;
+}
+
+.PageSection{
+  display: grid;
+  gap: 1vw;
+  margin: 1vh;
+}
+
+.BigCard{
+  display: flex;
+  border: 1px solid black;
+  width: 40vw;
+  justify-content: left;
+}
+
+.BigCard img{
+  border-radius: 100%;
+  width: 7vw;
+  height: 7vw;
+}
+
+.BigCard article{
+  
+  text-align: left;
+}
+
+article p {
+  width: 30vw;
+}
+
+.SmallCard{
+  display: flex;
+  border: 1px solid black;
+  width: 40vw;
+}
+
+.SmallCard div{
+  display: flex;
+}
+
+#label{
+  font-weight: bold;
+}
+
+img{
+  margin: 1vw;
+
+}
+
+.ImagemButton{
+  display: grid;
+  grid-template-columns: 1px 1fr; 
+  border: 1px solid black;
+  border-radius: 100px;
+  width: 15vw;
+  justify-self: center;
+  padding-left: 1vw;
+  background-color: white;
+  align-items: center;
+}
+
+.ImagemButton img{
+  width: 2vw;
+}
+
+
+
