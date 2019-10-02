@@ -1,73 +1,79 @@
 import React from 'react';
 import './App.css';
-import like from './img/favorite-white.svg'
+import like from './img/favorite-white.svg';
+import dlike from './img/favorite.svg';
+import avatar from './img/comment_icon.svg';
+import comente from './img/comment_icon.svg'
 
-class CaixaImagem = (props) => {
+class CaixaImagem extends React.Component {
     constructor (props){
         super(props);
 
         this.state ={
-            like: {like},
-            booLike: false,
+            like: like,
+            booLike: true,
             numbLike: 0,
             booComent: false,
             numbComent: 0,   
             value: "",     }
     }
 
-    function like() {
-        const lik = !booLike;
-        
-        if (lik === true){
+    like() {
+        const lik = this.state.booLike;
+        if ((lik) === true){
             this.setState( {numbLike: 1,
-                            like: {dlike},
+                            like: dlike,
+                            booLike: false,
                             } ) 
             
         }
-        else{
+        else if (lik === false){
             this.setState( {numbLike: 0,
-                            like: {like},
+                            like: like,
+                            booLike: true,
                             } ) 
         }
     }
 
-    function  commit(){
-        const numb = numbComent;
+    commit(){
+        const numb = this.state.numbComent;
         this.setState( {numbComent : numb + 1,
                         booComent : false,
                         value : "",
                      } )
     }
 
-    function mostrar(){
+    mostrar(){
         this.setState( {booComent : true} )
     }
 
     render() {
         const axi = this.state.booComent;
+        let input
         if(axi === true){
-            const input = <input placeholder="Escreva um comentario" value={this.state.value}/> <button onClick={commit()} ></button>
+            input = <div id="comente" ><input placeholder="Escreva um comentario" value={this.state.value}/> <button className="buttonCom" onClick={()=>{this.commit()}} >Comentar</button></div>
         }
         else{
-            const input = "";
+            input = "";
         }
         return (
             <div className="caixa">
                 <header>
-                    <img scr={this.porps.avatar} alt='avatar'/>
+                    <img src={avatar} alt='avatar'/>
                     <p> {this.props.user} </p>
                 </header>
-                <img src="" alt="post"/>
-                <foottr>
-                    <div>
-                        <button onClick={like()} ><img scr={ this.state.like } alt="Like"/></button>
+                <img src="https://via.placeholder.com/450" alt="post"/>
+                <footer>
+                    <div className="foot">
+                        <button onClick={() => {this.like()}} ><img src={ this.state.like } alt="Like"/></button>
                         <p> { this.state.numbLike } </p>
                     </div>
-                    <div>
-                        <button onClick={mostrar()} ><img src={this.props.comente} alt="Comente"/></button>
-                        <p> {this.stete.numbComent} </p>
-                    </div>
-                </foottr>
+                    <div className="foot">
+                        <button onClick={() => {this.mostrar()}} ><img src={comente} alt="Comente"/></button>
+                        <p> {this.state.numbComent} </p>
+                    </div>      
+                </footer>
+                {input}
             </div>
         );
     };
