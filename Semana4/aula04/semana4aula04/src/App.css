@@ -1,0 +1,34 @@
+.App{
+  display: grid;
+  justify-content: center;
+}
+.caixa{
+  display: grid;
+  border: 1px solid black;
+  margin:1vw;
+}
+.caixa header{
+  display: flex;
+  justify-content: left;
+}
+button{
+  border: 0;
+  background-color: white; 
+}
+
+footer{
+  display: flex;
+  justify-content: space-between;
+}
+.foot{
+  display:flex;
+  margin: 0.5vw
+}
+.buttonCom{
+  border: 1px solid black;
+}
+#comente{
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5vw;
+}
