@@ -1,9 +1,56 @@
 import React from 'react';
-import './App.css';
 import like from './img/favorite-white.svg';
 import dlike from './img/favorite.svg';
-import avatar from './img/comment_icon.svg';
-import comente from './img/comment_icon.svg'
+import comente from './img/comment_icon.svg';
+import styled from 'styled-components';
+
+const Caixa = styled.div`
+   display: grid;
+    border: 1px solid black;
+    margin:1vw;
+    `
+
+const CaixaHeader = styled.header`
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    `
+
+const CaixaButton = styled.button`
+    border: 0;
+    background-color: white; 
+    `
+
+const CaixaFooter = styled.footer`
+    display: flex;
+    justify-content: space-between;
+    `
+const Foot = styled.div`
+    display:flex;
+    margin: 0.5vw;
+    `
+
+const ButtonCom = styled.button`
+    border: 1px solid black;
+    background-color: white; 
+    `
+
+const Comente = styled.div`
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5vw;
+    `
+
+const CaixaImg = styled.img`
+    height: 450px;
+    width: 450px;
+    `
+    const Avatarimg = styled.img`
+    margin: 0.4vh;
+    height: 20px;
+    width: 20px;
+    `
+
 
 class CaixaImagem extends React.Component {
     constructor (props){
@@ -51,30 +98,30 @@ class CaixaImagem extends React.Component {
         const axi = this.state.booComent;
         let input
         if(axi === true){
-            input = <div id="comente" ><input placeholder="Escreva um comentario" value={this.state.value}/> <button className="buttonCom" onClick={()=>{this.commit()}} >Comentar</button></div>
+            input = <Comente ><input placeholder="Escreva um comentario" value={this.state.value}/> <ButtonCom onClick={()=>{this.commit()}} >Comentar</ButtonCom></Comente>
         }
         else{
             input = "";
         }
         return (
-            <div className="caixa">
-                <header>
-                    <img src={avatar} alt='avatar'/>
+            <Caixa>
+                <CaixaHeader>
+                    <Avatarimg src={this.props.avatar} alt='avatar'/>
                     <p> {this.props.user} </p>
-                </header>
-                <img src="https://via.placeholder.com/450" alt="post"/>
-                <footer>
-                    <div className="foot">
-                        <button onClick={() => {this.like()}} ><img src={ this.state.like } alt="Like"/></button>
+                </CaixaHeader>
+                <CaixaImg src={this.props.img} alt="post"/>
+                <CaixaFooter>
+                    <Foot>
+                        <CaixaButton onClick={() => {this.like()}} ><img src={ this.state.like } alt="Like"/></CaixaButton>
                         <p> { this.state.numbLike } </p>
-                    </div>
-                    <div className="foot">
-                        <button onClick={() => {this.mostrar()}} ><img src={comente} alt="Comente"/></button>
+                    </Foot>
+                    <Foot>
+                        <CaixaButton onClick={() => {this.mostrar()}} ><img src={comente} alt="Comente"/></CaixaButton>
                         <p> {this.state.numbComent} </p>
-                    </div>      
-                </footer>
+                    </Foot>      
+                </CaixaFooter>
                 {input}
-            </div>
+            </Caixa>
         );
     };
 }

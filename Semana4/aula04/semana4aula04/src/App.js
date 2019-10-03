@@ -1,29 +1,33 @@
 import React from 'react';
-import './App.css';
 import CaixaImagem from './CaixaImagem';
-
 import Formulario from './FormularioPost';
-import {test} from './FormularioPost'
+import styled from 'styled-components';
 
+const AppContener = styled.div`
+  display: grid;
+  justify-content: center;
+`
 
 class App extends React.Component {
   constructor(props){
     super(props);
 
     this.state = {
-      postsAtuais: []
+      postsAtuais: [],
     }
   };
 
-  atualizarPosts = () => {this.setState({postsAtuais: test})};
+  atualizarPosts = (Post) => {
+      const newPosts = [Post , ...this.state.postsAtuais]
+        this.setState({postsAtuais: newPosts})};
 
   render(){
-    const imgPosts = this.state.postsAtuais.map(test=> {return <CaixaImagem user={test.name} avatar={test.avatar} img={test.img}/> } )
+    const imgPosts = this.state.postsAtuais.map(post=> {return <CaixaImagem user={post.name} avatar={post.avatar} img={post.img}/> } )
     return (
-      <div className="App">
+      <AppContener>
         {imgPosts}
-        <Formulario/>
-      </div>
+        <Formulario atualizarPosts={this.atualizarPosts}/>
+      </AppContener>
     );
   }
 }

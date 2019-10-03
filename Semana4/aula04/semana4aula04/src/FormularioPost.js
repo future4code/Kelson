@@ -1,20 +1,32 @@
 import React from 'react';
 import styled from 'styled-components';
-import App from './App';
-
-let test = []
 
 const FormularioContener = styled.div`
-`
+    display:grid;
+    gap: 0.6vh;
+    border: 1px solid black;
+    padding: 1vw;
+    `
 
 const Name = styled.div`
-`
+    display:flex;
+    justify-content:space-between;
+    `
 
 const Avatar = styled.div`
-`
+     display:flex;
+    justify-content:space-between;
+    `
 
 const Imagempost = styled.div`
-`
+    display:flex;
+    justify-content:space-between;
+    `
+
+const FormButton = styled.button`
+    border: 1px solid black;
+    background-color: white; 
+    `
 
 class Formulario extends React.Component {
     constructor(props){
@@ -42,16 +54,12 @@ class Formulario extends React.Component {
 
     criarPost = () => {
         const newPost = {
-            nome: this.valueName,
-            avatar: this.valueAvatar,
-            img: this.valueImg 
+            name: this.state.valueName,
+            avatar: this.state.valueAvatar,
+            img: this.state.valueImg 
         }
-        const newPosts = [newPost , ...this.state.posts]
-        this.setState({posts: newPosts})
-        App.atualizarPosts()
-        test = this.state.posts;
+        this.props.atualizarPosts(newPost)
     }
-
 
 
     render(){
@@ -69,11 +77,10 @@ class Formulario extends React.Component {
                     <label>Link da Imagem:</label>
                     <input placeholder='Avatar' type='url' value={this.valueImg} onChange={ this.changeImg}/>
                 </Imagempost>
-                <button onClick={this.criarPost}>Criar</button>
+                <FormButton onClick={this.criarPost}>Criar</FormButton>
             </FormularioContener>
         );
     };
 }
 
-export default Formulario
-export { test };
+export default Formulario;
