@@ -16,6 +16,8 @@ class NewTask extends React.Component {
         this.state = { valuetask : ''}
     }
 
+        
+    }
     changeValue = (event) => {
          
         this.setState({ valueTask : event.target.value })
@@ -28,7 +30,7 @@ class NewTask extends React.Component {
                 value={this.valueTask} 
                 onChange={this.changeValue()} 
                 />
-                <button onClick={this.props.saveTaks(this.valueTask)}/>
+                <button onClick={this.props.saveTaks(this.state.valueTask)}/>
             </NewTaskDiv>
         );
     }
