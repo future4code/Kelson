@@ -1,13 +1,13 @@
 import React from 'react';
 
-
+let value3 = 0
 class Form3 extends React.Component {
     constructor(props){
-        super(prosp)
+        super(props)
 
-        this.state({ why: '',
+        this.state = { why: '',
                      compl: '',
-                    })
+                    }
     }
 
     changeWhy = (event) =>{
@@ -17,23 +17,31 @@ class Form3 extends React.Component {
     changeCompl = (event) =>{
         this.setState({compl: event.target.value})
     }
+
+    enviar = () =>{
+        value3 = 3
+        this.props.enviar3()
+}
     
     render(){
         return (
             <div className="App">
-                <label>Por que você não terminou um curso de graduação?</label>
+                <h2>ETAPA 3 - INFORMAÇÕES GERAIS DE ENSINO</h2>
+                <label>1. Por que você não terminou um curso de graduação? </label><br/>
                 <input type='text' value={this.state.why} onChange={this.changeWhy}/>
-                <label>Você fez algum curso complementar?</label>
+                <br/>
+                <label>2. Você fez algum curso complementar? </label><br/>
                 <select value={this.state.grau} onChange={this.changeGrau}>
                     <option value=''></option>
                     <option value='Tecn'>Curso técnico</option>
                     <option value='Eng'>Cursos de inglês</option>
                     <option value='NO'>Não fiz nem curso complementar</option>
                 </select>
-                <button>Enviar</button>
+                <br/>
+                <button onClick={this.enviar}>Enviar</button>
             </div>
         );
     }
 }
-
+export {value3};
 export default Form3;
