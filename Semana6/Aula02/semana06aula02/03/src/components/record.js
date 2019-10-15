@@ -23,9 +23,14 @@ class Record extends React.Component  {
         name: this.state.name,
         email: this.state.email
     }
-    const request = axios.post(https://us-central1-future4-users.cloudfunctions.net/api/users/createUser,
-                               , data, )
+    const request = axios.post( 'https://us-central1-future4-users.cloudfunctions.net/api/users/createUser' ,
+                                 data, { headers: { 'api-token': '7e06037146ee8282cd257e100d436f97'}})
 
+    request.then((response) => {
+        window.alert("Cadastro realizado com sucesso.")
+    }).catch((error) => {
+        window.alert("Erro ao enviar dados.")
+    })
   }
 
   render(){
@@ -37,7 +42,7 @@ class Record extends React.Component  {
                 <input value={this.state.name} onChange={this.changeName}/>
                 <label>E-mail: </label>
                 <input value={this.state.email} onChange={this.changeEmail}/>
-                <button>Cadastrar</button>
+                <button onClick={this.save}>Cadastrar</button>
           </div>
       </div>
     );
