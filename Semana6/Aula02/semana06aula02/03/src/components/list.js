@@ -8,7 +8,8 @@ class List extends React.Component  {
     super(props)
 
     this.state = {users: [],
-                  viewUser: false}
+                  viewUser: false,
+                  userId: ''}
   }
 
   componentDidMount(){
@@ -41,30 +42,33 @@ class List extends React.Component  {
       }
     }
 
-    changeViewUser = () =>{
+    changeViewUser = (id) =>{
     const value = !this.state.viewUser
-    this.setState({viewUser: value})
+    this.setState({viewUser: value,
+                   userId : id})
     }
 
 
   render(){
-    const list = this.state.users.map((user)=> {if(this.state.viewUser){
-                                                  return <User del={this.deleteUser} id={user.id} open={this.props.open}/>}
-                                                else {
-                                                  return (<div><li onClick={this.changeViewUser}>{user.name}</li> <button onClick={()=>this.deleteUser(user.id)}>X</button></div>) 
-                                                }
-                                      })
+    const list =  this.state.users.map((user)=> {
+                    return (<div>
+                              <li onClick={() => this.changeViewUser(user.id)}>{user.name}</li> 
+                              <button onClick={()=>this.deleteUser(user.id)}>X</button>
+                            </div>) 
+                  })
                                                 
     
     return (
         <div className="App">
             <button onClick={this.props.open}>Ir para Cadastro</button>
-            <div>
-                <h3>Usuários Cadastrados:</h3>
-                <ul>
-                    {list}
-                </ul>
-            </div>
+            {this.state.viewUser? 
+              <User del={this.deleteUser} id={this.state.userId} open={this.changeViewUser}/>  : 
+              <div>
+                  <h3>Usuários Cadastrados:</h3>
+                  <ul>
+                      {list}
+                  </ul>
+              </div>}
         </div>
     );
   }
