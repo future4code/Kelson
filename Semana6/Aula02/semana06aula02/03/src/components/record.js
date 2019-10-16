@@ -26,9 +26,9 @@ class Record extends React.Component  {
     const request = axios.post( 'https://us-central1-future4-users.cloudfunctions.net/api/users/createUser' ,
                                  data, { headers: { 'api-token': '7e06037146ee8282cd257e100d436f97'}})
 
-    request.then((response) => {
+    request.then(() => {
         window.alert("Cadastro realizado com sucesso.")
-    }).catch((error) => {
+    }).catch(() => {
         window.alert("Erro ao enviar dados.")
     })
   }
