@@ -17,20 +17,21 @@ class NewTask extends React.Component {
     }
 
         
-    }
+    
     changeValue = (event) => {
          
         this.setState({ valueTask : event.target.value })
     }
+
     render(){
         return (
             <NewTaskDiv>
                 <input type='text' 
                 placeholder="Nova Tarefa" 
                 value={this.valueTask} 
-                onChange={this.changeValue()} 
+                onChange={this.changeValue} 
                 />
-                <button onClick={this.props.saveTaks(this.state.valueTask)}/>
+                <button onClick = { () => { this.props.salveTask(this.state.valueTask) } }/>
             </NewTaskDiv>
         );
     }

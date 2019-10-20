@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
-import ItemList from 'itemList'
+import ItemList from './itemList.js'
 
 class ListTask extends React.Component {
   render(){

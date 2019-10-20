@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components'
 
 class ItemList extends React.Component {
     constructor(props){
