@@ -2,7 +2,7 @@
 import React from 'react';
 import { connect } from "react-redux";
 import Checkbox from '@material-ui/core/Checkbox';
-import { updateState, updateStatesAll, deleteTask, deleteAllCompliteTasks, createNewTask } from '../actions/Actions ';
+import { updateState, deleteTask } from '../actions/Actions ';
 
 
 
@@ -17,7 +17,7 @@ class Task extends React.Component {
 
 	handleChange = (event) =>{
         this.setState({nameTask: event.target.value})
-        updateState(this.props.data.id)
+        this.props.updateState(this.props.data.id)
 	}
 
 	render() {
@@ -29,7 +29,7 @@ class Task extends React.Component {
                 value="checkedA"
             />
             <p>{this.props.data.name}</p>
-            <p>X</p>
+            <p on onClick={deleteTask(this.props.data.id)}>X</p>
             
         </div>
     )
@@ -45,11 +45,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
 	return {
 	  updadeState: id => dispatch(updateState(id)),
-	  updateStatesAll: complite => dispatch(updateStatesAll(complite)),
-	  deleteTask: id => dispatch(deleteTask(id)),
-	  deleteAllCompliteTasks: () => dispatch(deleteAllCompliteTasks()),
-	  createNewTask: task => dispatch(createNewTask(task))
-
+	  deleteTask: id => dispatch(deleteTask(id))
 	};
   };
 

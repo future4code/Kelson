@@ -12,7 +12,6 @@ const devTools =
 
 
 const store = createStore(rootReducer, devTools);
-const generateClassName = createGenerateClassName()
 
 
 const theme = createMuiTheme()

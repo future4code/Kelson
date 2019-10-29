@@ -6,13 +6,13 @@ const initialState = {
     let tasks
     switch (action.type) {
         case 'CREATE_NEW_TASK':
-            return { ...state, task: [ ...state.task, action.payload.newTask] };
+            return { ...state, task: [ ...state.tasks, action.payload.newTask] };
         
         case 'UPDATE_STATE':
             let updadeTask = state.task.filter(task => task.id === action.payload.id)
             updadeTask.state = !updadeTask.state
             tasks =  state.task.filter(task => task.id !== action.payload.id)
-            return { ...state, task: [...tasks , updadeTask] };
+            return { ...state, tasks: [...tasks , updadeTask] };
         
         case 'UPDATE_STATES_ALL':
             let taskscomplite

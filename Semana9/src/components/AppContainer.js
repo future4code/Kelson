@@ -5,8 +5,9 @@ import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import TextField from '@material-ui/core/TextField';
 import { connect } from "react-redux";
-import { updateState, updateStatesAll, deleteTask, deleteAllCompliteTasks, createNewTask } from '../actions/Actions ';
+import { updateStatesAll, deleteAllCompliteTasks, createNewTask } from '../actions/Actions ';
 import Task from './Task'
+import Button from '@material-ui/core/Button';
 
 class AppContainer extends React.Component {
 	constructor(props) {
@@ -21,7 +22,18 @@ class AppContainer extends React.Component {
 		this.setState({nameTask: event.target.value})
 	}
 
+	createTask = () => {
+		const task = {
+						name: this.state.nameTask,
+						state: false,
+						id:  Number(Date.now())
+		}
+		console.log(task)
+		this.props.createNewTask(task);
+	}
+
 	render() {
+	const list = () => {this.props.tasks.map(task =>{return <Task data={task}/>})}
 		return (
 			<div>
 				<h1>4Task</h1>
@@ -33,10 +45,14 @@ class AppContainer extends React.Component {
 						onChange={this.handleChange}
 						margin="normal"
 					/>
+					<Button variant="contained" color="white"  onClick={this.createTask}>
+        				Create
+      				</Button>
+
 					<hr/>
-					<h3>Tasks</h3>
-					<CardContent>
-						{this.props.tasks.map(task => <Task data={task}/>)}
+					<h3>Tasks</h3>{console.log(this.props.tasks)}
+					<CardContent>	
+						{list}
 					</CardContent>
 					<CardActions>
 						
@@ -55,9 +71,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
 	return {
-	  updadeState: id => dispatch(updateState(id)),
 	  updateStatesAll: complite => dispatch(updateStatesAll(complite)),
-	  deleteTask: id => dispatch(deleteTask(id)),
 	  deleteAllCompliteTasks: () => dispatch(deleteAllCompliteTasks()),
 	  createNewTask: task => dispatch(createNewTask(task))
 
