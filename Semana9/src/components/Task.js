@@ -2,8 +2,13 @@
 import React from 'react';
 import { connect } from "react-redux";
 import Checkbox from '@material-ui/core/Checkbox';
-import { updateState, deleteTask } from '../actions/Actions ';
+import { updateState, deleteTask, updateStateIdl, deleteTaskIdl } from '../actions/Actions ';
+import styled from 'styled-components'
 
+const MainContenner = styled.div`
+	display:flex;
+	justify-content: space-between
+`
 
 
 class Task extends React.Component {
@@ -11,41 +16,49 @@ class Task extends React.Component {
 		super(props)
 
 		this.state = {
-			checkedA: false
+			checkedA: this.props.data.done
 		}
 	}
 
 	handleChange = (event) =>{
-        this.setState({nameTask: event.target.value})
-        this.props.updateState(this.props.data.id)
+        this.setState({checkedA: event.target.checked})
+        this.props.updateStateIdl(this.props.data.id)
+	}
+	onClikDeleteTask = () =>{
+		this.props.deleteTaskIdl(this.props.data.id)
 	}
 
 	render() {
+		console.log(this.props.data)
+		console.log(this.props.data.done)
+		console.log(this.state.checkedA)
     return (
-        <div>
+        <MainContenner>
              <Checkbox
-                checked={this.state.checkedA}
-                onChange={this.handleChange('checkedA')}
-                value="checkedA"
+				checked={this.state.checkedA}
+                onChange={this.handleChange}
+                value={'checkedA'}
             />
-            <p>{this.props.data.name}</p>
-            <p on onClick={deleteTask(this.props.data.id)}>X</p>
+            <p>{this.props.data.text}</p>
+            <button onClick={this.onClikDeleteTask}>X</button>
             
-        </div>
+        </MainContenner>
     )
 }
 }
 
 const mapStateToProps = state => {
 	return{
-		tasks: state.tasks
+		tasks: state.tasks.tasks
 	}
 }
 
 const mapDispatchToProps = dispatch => {
 	return {
-	  updadeState: id => dispatch(updateState(id)),
-	  deleteTask: id => dispatch(deleteTask(id))
+	  updateState: id => dispatch(updateState(id)),
+	  deleteTask: id => dispatch(deleteTask(id)),
+	  updateStateIdl: id => dispatch(updateStateIdl(id)),
+	  deleteTaskIdl: id => dispatch(deleteTaskIdl(id))
 	};
   };
 
