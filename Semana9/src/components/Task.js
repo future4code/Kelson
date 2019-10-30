@@ -7,7 +7,7 @@ import styled from 'styled-components'
 
 const MainContenner = styled.div`
 	display:flex;
-	justify-content: space-between
+	justify-content: space-between;
 `
 
 
@@ -15,13 +15,9 @@ class Task extends React.Component {
 	constructor(props) {
 		super(props)
 
-		this.state = {
-			checkedA: this.props.data.done
-		}
 	}
 
-	handleChange = (event) =>{
-        this.setState({checkedA: event.target.checked})
+	handleChange = () =>{
         this.props.updateStateIdl(this.props.data.id)
 	}
 	onClikDeleteTask = () =>{
@@ -31,13 +27,12 @@ class Task extends React.Component {
 	render() {
 		console.log(this.props.data)
 		console.log(this.props.data.done)
-		console.log(this.state.checkedA)
     return (
         <MainContenner>
-             <Checkbox
-				checked={this.state.checkedA}
+             <input
+			 	type='checkbox'
+				checked={this.props.data.done}
                 onChange={this.handleChange}
-                value={'checkedA'}
             />
             <p>{this.props.data.text}</p>
             <button onClick={this.onClikDeleteTask}>X</button>
