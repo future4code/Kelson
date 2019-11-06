@@ -5,6 +5,13 @@ import Button from "@material-ui/core/Button";
 import {routes} from "../Router/index"
 
 class LoginPage extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+    };
+  }
+
 
   render() {
     return (

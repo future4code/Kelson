@@ -21,3 +21,11 @@ export const getId = id =>
 	({type: "GET_ID",
 	payload: {"id": id}
 	})
+
+export const createTrip = form => async (dispatch) => {
+	await axios.post(`https://us-central1-missao-newton.cloudfunctions.net/futureX/kelson/trips`, form)
+}
+
+export const applyTrip = (form, id) => async (dispatch) => {
+	await axios.put(`https://us-central1-missao-newton.cloudfunctions.net/futureX/kelson/trips/${id}/apply`, form)
+}

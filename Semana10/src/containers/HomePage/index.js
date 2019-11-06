@@ -7,7 +7,6 @@ import {routes} from "../Router/index"
 class HomePage extends Component {
 
   render() {
-    console.log(this.props.id)
     return (
       <div>
         <Button onClick={this.props.goApplication}>Application</Button>
