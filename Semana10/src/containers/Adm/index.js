@@ -12,7 +12,6 @@ class Adm extends Component {
     };
   }
 
-
   render() {
     return (
       <div>
@@ -30,7 +29,8 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   goHome: () => dispatch(push(routes.home)),
   goListTrip: () => dispatch(push(routes.listTrip)),
-  goCreateTrip: () => dispatch(push(routes.createTrip))
+  goCreateTrip: () => dispatch(push(routes.createTrip)),
+  goLogin: () => dispatch(push(routes.login)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Adm);

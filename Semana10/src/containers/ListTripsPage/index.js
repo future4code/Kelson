@@ -5,11 +5,14 @@ import Button from "@material-ui/core/Button";
 import {routes} from "../Router/index"
 import { getTrips, getId } from "../../actions/trips";
 
+
 class ListTripPage extends Component {
 
   componentDidMount(){
     this.props.getTrips()
   }
+    
+     
 
   callDetails = (id) => {
     this.props.goDetailsTrip()
@@ -40,7 +43,8 @@ const mapDispatchToProps = dispatch => ({
   goBack: () => dispatch(goBack()),
   goDetailsTrip: () => dispatch(push(routes.detailsTrip)),
   getTrips: () => dispatch(getTrips()),
-  getId: id => dispatch(getId(id))
+  getId: id => dispatch(getId(id)),
+  goLogin: () => dispatch(push(routes.login)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(ListTripPage);

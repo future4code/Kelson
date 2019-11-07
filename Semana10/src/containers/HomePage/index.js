@@ -10,7 +10,7 @@ class HomePage extends Component {
     return (
       <div>
         <Button onClick={this.props.goApplication}>Application</Button>
-        <Button onClick={this.props.goListLogin}>Login</Button>
+        <Button onClick={this.props.goLogin}>Login</Button>
       </div>
     );
   }
@@ -22,7 +22,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   goApplication: () => dispatch(push(routes.application)),
-  goListLogin: () => dispatch(push(routes.login)),
+  goLogin: () => dispatch(push(routes.login)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomePage);

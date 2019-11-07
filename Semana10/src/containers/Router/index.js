@@ -8,6 +8,7 @@ import CreateTrip from "../CreateTrip";
 import ListTripPage from "../ListTripsPage";
 import TripDetailsPage from "../TripDetailsPage";
 import Adm from "../Adm";
+import ProtectRoute from "../../components/protectRoute"
 
 export const routes = {
   home: "/",
@@ -25,11 +26,11 @@ function Router(props) {
     <ConnectedRouter history={props.history}>
       <Switch>
         <Route path={routes.application} component={Aplication} />
-        <Route path={routes.adm} component={Adm} />
+        <ProtectRoute path={routes.adm} component={Adm} />
         <Route path={routes.login} component={LoginPage} />
-        <Route path={routes.createTrip} component={CreateTrip} />
-        <Route path={routes.listTrip} component={ListTripPage} />
-        <Route path={routes.detailsTrip} component={TripDetailsPage} />
+        <ProtectRoute path={routes.createTrip} component={CreateTrip} />
+        <ProtectRoute path={routes.listTrip} component={ListTripPage} />
+        <ProtectRoute path={routes.detailsTrip} component={TripDetailsPage} />
         <Route path={routes.home} component={HomePage} />
       </Switch>
     </ConnectedRouter>

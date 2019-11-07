@@ -70,7 +70,7 @@ class Aplication extends Component {
           <input
             id="profession"
             name="profession"
-            type="number"
+            type="text"
             value={this.state.form.profession || ""}
             required
             onChange={this.handleInputChange}
@@ -82,6 +82,7 @@ class Aplication extends Component {
             id="country"
             name="country"
             value={this.state.form.country || ""}
+            onChange={this.handleInputChange}
             required
           >
             <option value="Canada">Canada</option>
@@ -99,6 +100,7 @@ class Aplication extends Component {
             id="tripId"
             name="tripId"
             value={this.state.form.tripId || ""}
+            onChange={this.handleInputChange}
             required
           >
             {this.props.trips.map( trip => (<option value={trip.id}>{trip.name} - {trip.planet}</option>))}

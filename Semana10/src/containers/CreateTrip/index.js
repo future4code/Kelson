@@ -5,6 +5,7 @@ import Button from "@material-ui/core/Button";
 import {routes} from "../Router/index"
 import {createTrip} from "../../actions/trips"
 
+
 class CreateTrip extends Component {
   constructor(props) {
     super(props);
@@ -116,6 +117,7 @@ const mapDispatchToProps = dispatch => ({
   goBack: () => dispatch(goBack()),
   goCreateTrip: () => dispatch(push(routes.createTrip)),
   createTrip: form => dispatch(createTrip(form)),
+  goLogin: () => dispatch(push(routes.login)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(CreateTrip);
