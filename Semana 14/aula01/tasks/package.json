@@ -1,0 +1,15 @@
+{
+  "name": "tasks",
+  "version": "1.0.0",
+  "description": "tasks to do",
+  "main": "02.js",
+  "scripts": {
+    "start": "node 02.js"
+    "test": "jest"
+  },
+  "keywords": [
+    "task"
+  ],
+  "author": "Kelson",
+  "license": "ISC"
+}
