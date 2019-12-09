@@ -28,5 +28,6 @@ class Bank {
     }
 }
 exports.Bank = Bank;
+Bank.accounts = [];
 Bank.fileManager = new jsonFileManager_1.JSONFileManager("bank.JSON");
 //# sourceMappingURL=bank.js.map

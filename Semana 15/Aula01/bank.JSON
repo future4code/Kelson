@@ -1,0 +1,23 @@
+[
+  {
+    "name": "João",
+    "cpf": "123.147.159.86",
+    "age": 23,
+    "balance": 0,
+    "transactions": []
+  },
+  {
+    "name": "Darvas",
+    "cpf": "132.147.159.86",
+    "age": 23,
+    "balance": 0,
+    "transactions": []
+  },
+  {
+    "name": "Soter",
+    "cpf": "123.174.159.86",
+    "age": 23,
+    "balance": 0,
+    "transactions": []
+  }
+]

@@ -2,7 +2,7 @@ import {UserAccount} from "./userAccount";
 import {JSONFileManager} from "./jsonFileManager";
 
 export class Bank {
-    private static accounts: UserAccount[];
+    private static accounts: UserAccount[] = [];
     private static fileManager: JSONFileManager = new JSONFileManager("bank.JSON")
 
     static createAccount(name: string, cpf: string, age: number) : void{
@@ -12,7 +12,7 @@ export class Bank {
     }
 
     static getAllAccounts(): UserAccount[] {
-        const file = Bank.fileManager.getObjectFromJson();
+        const file:any  = Bank.fileManager.getObjectFromJson();
         file.accounts.forEach((account: any) => {
             this.createAccount(account.name, account.cpf, account.age)
         });
@@ -20,7 +20,7 @@ export class Bank {
     }
 
     static getAccountByCpf (cpf: string): UserAccount {
-        let selectAccount;
+        let selectAccount: UserAccount;
         this.accounts.forEach((account: UserAccount) => {
             if (account.cpf === cpf)
                 selectAccount = account;
