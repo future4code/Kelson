@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="39ea3ed2-00f7-4e62-af27-bc8c2f00ae0f" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1UkYUVUXPHcD3ZP3bK7B3M1nycS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="39ea3ed2-00f7-4e62-af27-bc8c2f00ae0f" name="Default Changelist" comment="" />
+      <created>1575902076330</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575902076330</updated>
+      <workItem from="1575902080730" duration="161000" />
+      <workItem from="1575902249157" duration="373000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="555" y="218" width="800" height="679" key="#Notifications" timestamp="1575902257246">
+      <screen x="0" y="34" width="1920" height="1046" />
+    </state>
+    <state x="555" y="218" width="800" height="679" key="#Notifications/0.34.1920.1046/0.1080.1920.1080@0.34.1920.1046" timestamp="1575902257246" />
+    <state x="643" y="280" width="624" height="555" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1575902116555">
+      <screen x="0" y="34" width="1920" height="1046" />
+    </state>
+    <state x="643" y="280" width="624" height="555" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.34.1920.1046/0.1080.1920.1080@0.34.1920.1046" timestamp="1575902116555" />
+  </component>
+</project>
