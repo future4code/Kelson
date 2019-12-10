@@ -1,0 +1,27 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const dessert_1 = require("./dessert");
+const saltydish_1 = require("./saltydish");
+const cashier_1 = require("./cashier");
+const manager_1 = require("./manager");
+const chef_1 = require("./chef");
+exports.menu = [];
+const feijoada = new saltydish_1.SaltyDish("feijoada", 100, 20, ["leite condensado"], 100);
+console.log(feijoada.name);
+const brigadeiro = new dessert_1.Dessert("brigadeiro", 100, 20, ["leite condensado"], 100, 10);
+console.log(brigadeiro.name);
+exports.menu.push(brigadeiro, feijoada);
+console.log(exports.menu);
+const cashier = new cashier_1.Cashier("João Golias", 10000);
+cashier.sayJob();
+console.log(cashier.calculateBill([feijoada, brigadeiro, brigadeiro]));
+const manager = new manager_1.Manager("Luciano", 30000);
+manager.sayJob();
+console.log(manager.calculateBill([feijoada, brigadeiro, brigadeiro, feijoada]));
+const chef = new chef_1.Chef("Arthur", 30000);
+chef.sayJob();
+exports.menu = chef.removeDishFromMenu("feijoada");
+console.log(exports.menu);
+chef.addDishToMenu("brigadeiro", 100, 20, ["leite condensado"], 100, 10);
+console.log(exports.menu);
+//# sourceMappingURL=index.js.map
