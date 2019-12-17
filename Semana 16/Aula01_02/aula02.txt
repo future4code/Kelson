@@ -1,0 +1,85 @@
+1. Restaurante -
+SELECT *
+FROM funcionarios
+ORDER BY salario DESC
+LIMIT 5;
+
+SELECT  local_de_trabalho, AVG(salario)
+FROM funcionarios
+GROUP BY local_de_trabalho;
+
+SELECT local_de_trabalho, genero, count(genero)
+FROM funcionarios
+GROUP BY local_de_trabalho,genero
+ORDER BY local_de_trabalho;
+
+SELECT *
+FROM funcionarios
+ORDER BY data_contratacao
+LIMIT 10;
+
+2. Banco -
+
+SELECT *
+from correntistas
+WHERE pais = "BRAzIL" and conta_corrente > 3000
+LIMIT 100;
+
+SELECT COUNT(primeiro_nome)
+FROM correntistas 
+where genero = "F" AND aniversario < "1987/12/17";
+
+SELECT SUM(conta_corrente)
+FROM correntistas
+WHERE pais = "PERU" AND aniversario < "1994/12/17";
+
+SELECT pais, genero, count(genero)
+FROM correntistas 
+GROUP BY pais,genero
+ORDER BY pais;
+
+SELECT aniversario, count(aniversario)
+FROM correntistas 
+GROUP BY aniversario
+LIMIT 1;
+
+SELECT pais, AVG(DATEDIFF(CURDATE(), aniversario))
+FROM correntistas
+GROUP BY pais;
+
+SELECT * 
+FROM correntistas 
+WHERE MONTH(aniversario) = 12; 
+
+SELECT LOWER(pais), AVG(conta_corrente)
+FROM correntistas 
+GROUP BY pais;
+
+SELECT primeiro_nome, COUNT(primeiro_nome) AS "name_number"
+FROM correntistas 
+GROUP BY primeiro_nome
+ORDER BY name_number DESC
+LIMIT 3;
+
+3 EScrita -
+
+INSERT INTO correntistas (id,primeiro_nome,ultimo_nome,email,genero,conta_corrente, pais,aniverario,divida_perdoada)
+VALUES 	(6, "Olivaldo", "Coelho", "Olivaldo@gmial.com","M", 56723, "Argentina", "1978-07-05", 0),
+		(7, "Chris", "Ferreira", "ferichris@gmial.com","M", 876, "Peru", "1986-08-27", 0),
+		(8, "Fernando", "talbat", "talbat@gmial.com","M", 0, "Chile", "1964-10-15", 0),
+		(9, "Tulio", "Sofri", "tusofri@gmial.com","M", 12890, "Argentina", "1997-01-18", 0),
+		(10, "Tiago", "leite", "beberleite@gmial.com","M", 46, "Chile", "1983-06-02", 0);
+		
+ALTER TABLE correntistas
+ADD estado_civil varchar(255) NOT NULL DEFAULT "Soltiro(a)";
+
+UPDATE correntistas
+set estado_civil = "Casado(a)"
+WHERE aniverario < "1989/12/17";
+
+ALTER TABLE correntistas
+ADD numero_da_sorte int NOT NULL DEFAULT 0;
+
+UPDATE correntistas
+set numero_da_sorte = FLOOR(RAND()*(100)+1);
+
