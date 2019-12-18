@@ -1,0 +1,65 @@
+SELECT livros.titulo , autores.primeiro_nome 
+FROM livros
+JOIN autores ON livros.autor_id = autores.id
+WHERE autores.primeiro_nome = "Dan";
+
+SELECT livros.titulo , CONCAT(autores.primeiro_nome,' ', autores.ultimo_nome) "Nome Completo"
+FROM livros
+JOIN autores ON livros.autor_id = autores.id
+WHERE autores.primeiro_nome LIKE "A%";
+
+SELECT COUNT(livros.titulo) , CONCAT(autores.primeiro_nome,' ', autores.ultimo_nome) "Nome Completo"
+FROM livros
+JOIN autores ON livros.autor_id = autores.id
+GROUP BY autores.id;
+
+SELECT livros.titulo, COUNT(livros.id)
+FROM livros_alugados
+JOIN livros ON livros_alugados.livro_id = livros.id
+GROUP BY livros.titulo
+ORDER BY COUNT(livros.id) DESC                              
+LIMIT 1;
+
+SELECT usuarios.primeiro_nome, COUNT(l.livro_id)
+FROM livros_alugados l
+JOIN usuarios ON l.usuario_id = usuarios.id
+GROUP BY usuarios.primeiro_nome;
+
+SELECT livros.titulo , editoras.nome, editoras.data_de_fundacao 
+FROM livros
+JOIN editoras ON livros.editora_id = editoras.id
+WHERE editoras.data_de_fundacao < "1990/01/01";
+
+SELECT usuarios.primeiro_nome, usuarios.data_nascimento
+FROM livros_alugados l
+JOIN usuarios ON l.usuario_id = usuarios.id
+where l.livro_id = 1
+ORDER BY usuarios.data_nascimento
+LIMIT 1;
+
+SELECT usuarios.nacionalidade, COUNT(usuarios.nacionalidade)
+FROM livros_alugados l
+JOIN usuarios ON l.usuario_id = usuarios.id
+GROUP BY usuarios.nacionalidade
+ORDER BY COUNT(usuarios.nacionalidade)
+LIMIT 1;
+
+SELECT editoras.nome, COUNT(editoras.nome)
+FROM livros_alugados
+JOIN livros ON livros_alugados.livro_id = livros.id
+JOIN editoras on livros.editora_id = editoras.id
+JOIN usuarios on livros_alugados.usuario_id = usuarios.id
+WHERE usuarios.data_nascimento < "1999/12/18"
+GROUP BY editoras.nome
+ORDER BY COUNT(editoras.nome) DESC                              
+LIMIT 2;
+
+SELECT livros.titulo, COUNT(livros.id)
+FROM livros_alugados
+JOIN livros ON livros_alugados.livro_id = livros.id
+JOIN usuarios on livros_alugados.usuario_id = usuarios.id
+WHERE livros.ano > usuarios.data_nascimento
+GROUP BY livros.titulo
+ORDER BY COUNT(livros.id) DESC                              
+LIMIT 1;
+
