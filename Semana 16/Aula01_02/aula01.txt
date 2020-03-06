@@ -1,0 +1,68 @@
+1. Restaurante - 
+
+SELECT nome, salario
+FROM funcionarios 
+WHERE salario > 2000;
+
+SELECT nome, data_contratacao
+FROM funcionarios 
+WHERE data_contratacao < "2004/01/01";
+
+SELECT nome, data_nascimento
+FROM funcionarios 
+WHERE nome LIKE "%ei%";
+
+SELECT nome, salario, data_nascimento
+FROM funcionarios
+WHERE data_nascimento < "1998/12/17" AND salario > 1300;
+
+
+CREATE TABLE funcionarios (
+	id int PRIMARy KEY,
+	nome varchar(255) NOT NULL,
+	salario int NOT NULL,
+	local_de_trabalho varchar(255) NOT NULL,
+	genero varchar(255) NOT NULL,
+	data_de_nascimento date NOT NULL,
+	data_de_contratacao date NOT NULL);
+
+INSERT INTO funcionarios (id,nome,salario,local_de_trabalho,genero,data_de_nascimento,data_de_contratacao)
+VALUES (1, "Josevaldo da Silva", 6000, "escritorio","M", "1998-03-12", "2016-05-05");
+
+2.Banco
+
+SELECT primeiro_nome, email
+FROM correntistas
+WHERE pais = "Brazil" AND conta_corrente < 0 ;
+
+SELECT primeiro_nome, genero
+FROM correntistas
+WHERE pais = "PERU" AND aniversario < "1990/01/01";
+
+SELECT ultimo_nome
+FROM correntistas 
+WHERE primeiro_nome LIKE "A%";
+
+SELECT primeiro_nome, aniversario
+FROM correntistas
+WHERE aniversario > "2000/12/31" AND conta_corrente > 1000;
+
+CREATE TABLE correntistas(
+	id int PRIMARy KEY,
+	primeiro_nome varchar(255) NOT NULL,
+	ultimo_nome varchar(255) NOT NULL,
+	email varchar(255) NOT NULL UNIQUE,
+	genero varchar(255) NOT NULL,
+	conta_corrente int NOT NULL,
+	pais varchar(255) NOT NULL,
+	aniverario date NOT NULL,
+	divida_perdoada bool NOT NULL);
+
+INSERT INTO correntistas (id,primeiro_nome,ultimo_nome,email,genero,conta_corrente, pais,aniverario,divida_perdoada)
+VALUES 	(1, "Josevaldo", "da Silva", "josevaldo@gmial.com","M", 60000, "Brazil", "1998-03-12", 0),
+		(2, "Jose", "Algusto", "ze@gmial.com","M", 50000, "Brazil", "1988-04-23", 0),
+		(3, "Henrique", "Hideki", "hideki@gmial.com","M", 100060000, "Brazil", "1978-12-12", 0),
+		(4, "Gustavo", "Ribeiro", "gustavao@gmial.com","M", 47653, "Brazil", "1993-09-18", 0),
+		(5, "Lucas", "Ribeiro", "ribeiro@gmial.com","M", 33456, "Brazil", "1995-07-16", 0);
+
+
